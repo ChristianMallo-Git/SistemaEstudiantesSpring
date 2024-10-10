@@ -7,8 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
-// boilerplate - repetitivo
-@Table(name = "estudiante") //--> Al tener la tabla en BBDD nombre en español tengo que recalcarlo
+@Table(name = "estudiante")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -16,7 +15,7 @@ import lombok.ToString;
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_estudiante") //--> Tengo que poner esto debido a que en la tabla en BBDD está en español
+    @Column(name = "id_estudiante")
     private Integer idStudent;
     @Column(name = "nombre")
     private String name;
@@ -26,5 +25,4 @@ public class Student {
     private Integer phoneNumber;
     @Column(name = "email")
     private String email;
-
 }

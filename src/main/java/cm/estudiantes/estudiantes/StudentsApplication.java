@@ -21,7 +21,6 @@ public class StudentsApplication implements CommandLineRunner {
 	private StudentService studentService;
 
 	private static final Logger logger = LoggerFactory.getLogger(StudentsApplication.class);
-	//Al utilizar Spring, en vez de System usamos Logger
 
 	private String nl = System.lineSeparator();
 
@@ -32,7 +31,6 @@ public class StudentsApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		logger.info("Starting the application...");
-		//Levantar la fabrica de Spring
 		SpringApplication.run(StudentsApplication.class, args);
 		logger.info("Application completed!");
 	}
@@ -59,10 +57,7 @@ public class StudentsApplication implements CommandLineRunner {
 				}
 			} catch (InputMismatchException e) {
 				logger.info("An unexpected error occurred: Invalid input, cannot be a character/string. Please try again." + nl);
-				console.next();  //-->Al introducir un dato erroneo de numérico, el objeto Scanner queda en un
-				//estado inconsistente, no avanza a la siguiente entrada. Si no hacemos nada por limpiar dicha
-				//entrada se volvera a repetir en el siguiente ciclo del bucle. El método console.next(); permite
-				//consumir dicha entrada incorrecta permitiendo que el Scanner avance a la siguiente entrada.
+				console.next();
 			}
 		} while (true);
 	}

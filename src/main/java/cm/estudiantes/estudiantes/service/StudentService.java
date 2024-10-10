@@ -23,9 +23,6 @@ public class StudentService implements IStudentService {
     public Student searchStudentById(Integer idStudent) {
         Student student = studentRepository.findById(idStudent).orElse(null);
         return student;
-        //El método findById devuelve un objeto de tipo Optional, tenemos que indicar
-        //qué queremos que suceda en caso que el valor que se regrese sea nulo o si se
-        //ocasiona una Exception
     }
 
     @Override
