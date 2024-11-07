@@ -3,4 +3,4 @@ Ejemplo de una App en la que puedes: 1. Listar los estudiantes 2. Buscar un estu
 
 En este ejercicio utilizamos el framework Spring Boot, la interfaz JpaRepository y la librería Lombok con el fin de reducir el código boilerplate.
 
-Muchas gracias a todo lector que este disfrutando con mis primeros pasos en desarrollo de software y control de versiones
+Muchas gracias a todo lector que esté disfrutando con mis primeros pasos en desarrollo de software y control de versiones
